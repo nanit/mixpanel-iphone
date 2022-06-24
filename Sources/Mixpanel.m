@@ -6,6 +6,7 @@
 
 #import <objc/runtime.h>
 #import "Mixpanel.h"
+#import "MixpanelBoolean.h"
 #import "MixpanelPeople.h"
 #import "MixpanelPeoplePrivate.h"
 #import "MixpanelGroup.h"
@@ -519,7 +520,7 @@ static CTTelephonyNetworkInfo *telephonyInfo;
     if (![event hasPrefix:@"$"]) [[NSUserDefaults standardUserDefaults] setBool:YES forKey:MPDebugTrackedKey];
 #endif
     
-    properties = [properties copy];
+    properties = [Mixpanel replaceMixpanelPropertiesWithNativeProperties:[properties copy]];
     [Mixpanel assertPropertyTypes:properties];
 
     NSTimeInterval epochInterval = [[NSDate date] timeIntervalSince1970];
@@ -1196,6 +1197,25 @@ typedef NSDictionary*(^PropertyUpdate)(NSDictionary*);
                                   }];
     [p addEntriesFromDictionary:[self collectDeviceProperties]];
     return [p copy];
+}
+
++ (NSDictionary<NSString *, id> *)replaceMixpanelPropertiesWithNativeProperties:(NSDictionary *)dict {
+    NSArray *originalKeys = [dict allKeys];
+    NSArray *originalValues = [dict allValues];
+    NSMutableArray<id> *mutableValues = [NSMutableArray arrayWithArray:originalValues];
+    
+    for (NSInteger i = 0; i < [originalKeys count]; i++) {
+        id value = [originalValues objectAtIndex:i];
+        if ([value isKindOfClass:[MixpanelBoolean class]]) {
+            MixpanelBoolean *boolWrapper = (MixpanelBoolean *)value;
+            BOOL replacement = [boolWrapper value] ? YES : NO;
+            [mutableValues replaceObjectAtIndex:i
+                                     withObject:[NSNumber numberWithBool:replacement]];
+        }
+    }
+    
+    return [NSDictionary dictionaryWithObjects:mutableValues
+                                       forKeys:originalKeys];
 }
 
 #pragma mark - UIApplication Events

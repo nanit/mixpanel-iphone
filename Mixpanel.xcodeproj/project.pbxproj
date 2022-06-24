@@ -27,6 +27,14 @@
 		17B097712707A66F00492E14 /* MixpanelPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B0976F2707A66F00492E14 /* MixpanelPersistence.m */; };
 		17B097722707A66F00492E14 /* MixpanelPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B0976F2707A66F00492E14 /* MixpanelPersistence.m */; };
 		17B097732707A66F00492E14 /* MixpanelPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B0976F2707A66F00492E14 /* MixpanelPersistence.m */; };
+		46C632A928649D770032DDC8 /* MixpanelBoolean.h in Headers */ = {isa = PBXBuildFile; fileRef = 46C632A728649D760032DDC8 /* MixpanelBoolean.h */; };
+		46C632AA28649D770032DDC8 /* MixpanelBoolean.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C632A828649D770032DDC8 /* MixpanelBoolean.m */; };
+		46C632AB286592100032DDC8 /* MixpanelBoolean.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C632A828649D770032DDC8 /* MixpanelBoolean.m */; };
+		46C632AC286592100032DDC8 /* MixpanelBoolean.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C632A828649D770032DDC8 /* MixpanelBoolean.m */; };
+		46C632AD286592110032DDC8 /* MixpanelBoolean.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C632A828649D770032DDC8 /* MixpanelBoolean.m */; };
+		46C632AE286592140032DDC8 /* MixpanelBoolean.h in Headers */ = {isa = PBXBuildFile; fileRef = 46C632A728649D760032DDC8 /* MixpanelBoolean.h */; };
+		46C632AF286592150032DDC8 /* MixpanelBoolean.h in Headers */ = {isa = PBXBuildFile; fileRef = 46C632A728649D760032DDC8 /* MixpanelBoolean.h */; };
+		46C632B0286592150032DDC8 /* MixpanelBoolean.h in Headers */ = {isa = PBXBuildFile; fileRef = 46C632A728649D760032DDC8 /* MixpanelBoolean.h */; };
 		511FC3591C2B74BD00DC4796 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C170D451A4A05A000D9E0F2 /* Foundation.framework */; };
 		513243441D1B473100CBA9AA /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 513243431D1B473100CBA9AA /* WatchKit.framework */; };
 		519AD7A41CB706A6005411A5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 519AD7A31CB706A6005411A5 /* Security.framework */; };
@@ -187,6 +195,8 @@
 		1727D18126F9094D006C74F3 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS14.5.sdk/usr/lib/libsqlite3.tbd; sourceTree = DEVELOPER_DIR; };
 		17B0976A2707A64B00492E14 /* MixpanelPersistence.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MixpanelPersistence.h; sourceTree = "<group>"; };
 		17B0976F2707A66F00492E14 /* MixpanelPersistence.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MixpanelPersistence.m; sourceTree = "<group>"; };
+		46C632A728649D760032DDC8 /* MixpanelBoolean.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MixpanelBoolean.h; sourceTree = "<group>"; };
+		46C632A828649D770032DDC8 /* MixpanelBoolean.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MixpanelBoolean.m; sourceTree = "<group>"; };
 		511FC39D1C2B74BD00DC4796 /* Mixpanel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Mixpanel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		511FC39F1C2B74DB00DC4796 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
 		513243431D1B473100CBA9AA /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.2.sdk/System/Library/Frameworks/WatchKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -393,6 +403,8 @@
 				86542F98260AB14E00C478DE /* AutomaticEvents.m */,
 				86542F97260AB14E00C478DE /* Mixpanel.h */,
 				86542F94260AB14E00C478DE /* Mixpanel.m */,
+				46C632A728649D760032DDC8 /* MixpanelBoolean.h */,
+				46C632A828649D770032DDC8 /* MixpanelBoolean.m */,
 				86542FA1260AB14F00C478DE /* MixpanelGroup.h */,
 				86542F9C260AB14E00C478DE /* MixpanelGroup.m */,
 				86542F8B260AB14E00C478DE /* MixpanelGroupPrivate.h */,
@@ -493,6 +505,7 @@
 				86543162260AB2CE00C478DE /* SessionMetadata.h in Headers */,
 				86542FD1260AB20800C478DE /* MixpanelWatchProperties.h in Headers */,
 				865430A3260AB29C00C478DE /* MixpanelPeoplePrivate.h in Headers */,
+				46C632AE286592140032DDC8 /* MixpanelBoolean.h in Headers */,
 				865430C1260AB2A300C478DE /* MixpanelType.h in Headers */,
 				86543058260AB28A00C478DE /* MixpanelGroup.h in Headers */,
 				86543135260AB2C200C478DE /* MPNetworkPrivate.h in Headers */,
@@ -515,6 +528,7 @@
 				86542FB2260AB14F00C478DE /* MixpanelType.h in Headers */,
 				86542FB5260AB14F00C478DE /* Mixpanel.h in Headers */,
 				86542FB4260AB14F00C478DE /* AutomaticEvents.h in Headers */,
+				46C632A928649D770032DDC8 /* MixpanelBoolean.h in Headers */,
 				86542FBD260AB14F00C478DE /* MPFoundation.h in Headers */,
 				86542FB8260AB14F00C478DE /* MixpanelExceptionHandler.h in Headers */,
 				86542FC0260AB14F00C478DE /* MixpanelPeople.h in Headers */,
@@ -536,6 +550,7 @@
 				865430B7260AB2A000C478DE /* MixpanelPrivate.h in Headers */,
 				865430C6260AB2A300C478DE /* MixpanelType.h in Headers */,
 				1727D17726F9090E006C74F3 /* MPDB.h in Headers */,
+				46C632AF286592150032DDC8 /* MixpanelBoolean.h in Headers */,
 				8654305D260AB28A00C478DE /* MixpanelGroup.h in Headers */,
 				8654308A260AB29500C478DE /* MixpanelPeople.h in Headers */,
 				8654303F260AB28300C478DE /* MixpanelExceptionHandler.h in Headers */,
@@ -557,6 +572,7 @@
 				865430BC260AB2A000C478DE /* MixpanelPrivate.h in Headers */,
 				865430CB260AB2A400C478DE /* MixpanelType.h in Headers */,
 				1727D17826F9090E006C74F3 /* MPDB.h in Headers */,
+				46C632B0286592150032DDC8 /* MixpanelBoolean.h in Headers */,
 				86543062260AB28B00C478DE /* MixpanelGroup.h in Headers */,
 				8654308F260AB29500C478DE /* MixpanelPeople.h in Headers */,
 				86543044260AB28400C478DE /* MixpanelExceptionHandler.h in Headers */,
@@ -820,6 +836,7 @@
 				86542FDA260AB20B00C478DE /* MixpanelWatchProperties.m in Sources */,
 				86543171260AB2D200C478DE /* SessionMetadata.m in Sources */,
 				8631A96727399FD50012D7AF /* MPLogger.m in Sources */,
+				46C632AB286592100032DDC8 /* MixpanelBoolean.m in Sources */,
 				865430D0260AB2A600C478DE /* MixpanelType.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -840,6 +857,7 @@
 				86542FBA260AB14F00C478DE /* MixpanelGroup.m in Sources */,
 				86542FAF260AB14F00C478DE /* SessionMetadata.m in Sources */,
 				8631A96627399FD50012D7AF /* MPLogger.m in Sources */,
+				46C632AA28649D770032DDC8 /* MixpanelBoolean.m in Sources */,
 				86542FB6260AB14F00C478DE /* AutomaticEvents.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -856,6 +874,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				86EDD32F2728BAD300BA05F9 /* MPJSONHandler.m in Sources */,
+				46C632AC286592100032DDC8 /* MixpanelBoolean.m in Sources */,
 				8654306C260AB28E00C478DE /* MixpanelGroup.m in Sources */,
 				8654304E260AB28700C478DE /* MixpanelExceptionHandler.m in Sources */,
 				1727D17B26F9090E006C74F3 /* MPDB.m in Sources */,
@@ -875,6 +894,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				86EDD3302728BAD300BA05F9 /* MPJSONHandler.m in Sources */,
+				46C632AD286592110032DDC8 /* MixpanelBoolean.m in Sources */,
 				86543071260AB28E00C478DE /* MixpanelGroup.m in Sources */,
 				86543053260AB28700C478DE /* MixpanelExceptionHandler.m in Sources */,
 				1727D17C26F9090E006C74F3 /* MPDB.m in Sources */,
