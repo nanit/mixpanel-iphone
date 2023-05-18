@@ -4,6 +4,7 @@
 //
 //  Copyright © Mixpanel. All rights reserved.
 //
+#import <TargetConditionals.h>
 
 #import "Mixpanel.h"
 #import "MixpanelPrivate.h"
@@ -165,25 +166,6 @@ static const NSUInteger kBatchSize = 50;
 }
 
 #pragma mark - Helpers
-+ (NSArray<NSURLQueryItem *> *)buildDecideQueryForProperties:(NSDictionary *)properties
-                                              withDistinctID:(NSString *)distinctID
-                                                    andToken:(NSString *)token
-{
-    NSURLQueryItem *itemVersion = [NSURLQueryItem queryItemWithName:@"version" value:@"1"];
-    NSURLQueryItem *itemLib = [NSURLQueryItem queryItemWithName:@"lib" value:@"iphone"];
-    NSURLQueryItem *itemToken = [NSURLQueryItem queryItemWithName:@"token" value:token];
-    NSURLQueryItem *itemDistinctID = [NSURLQueryItem queryItemWithName:@"distinct_id" value:distinctID];
-
-    // Convert properties dictionary to a string
-    NSData *propertiesData = [NSJSONSerialization dataWithJSONObject:properties
-                                                             options:0
-                                                               error:NULL];
-    NSString *propertiesString = [[NSString alloc] initWithData:propertiesData
-                                                       encoding:NSUTF8StringEncoding];
-    NSURLQueryItem *itemProperties = [NSURLQueryItem queryItemWithName:@"properties" value:propertiesString];
-    
-    return @[ itemVersion, itemLib, itemToken, itemDistinctID, itemProperties ];
-}
 
 + (NSString *)pathForEndpoint:(MPNetworkEndpoint)endpoint
 {
@@ -192,7 +174,6 @@ static const NSUInteger kBatchSize = 50;
     dispatch_once(&onceToken, ^{
         endPointToPath = @{ @(MPNetworkEndpointTrack): @"/track/",
                             @(MPNetworkEndpointEngage): @"/engage/",
-                            @(MPNetworkEndpointDecide): @"/decide",
                             @(MPNetworkEndpointGroups): @"/groups/"
                             };
     });
