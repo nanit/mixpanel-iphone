@@ -211,8 +211,12 @@
                     NSError *error;
                     NSMutableDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:blob options:NSJSONReadingMutableContainers error:&error];
                     jsonObject[@"id"] = [NSNumber numberWithInt:eId];
-                    [rows addObject:jsonObject];
-                    rowsRead++;
+                    if (jsonObject) {
+                        [rows addObject:jsonObject];
+                        rowsRead++;
+                    } else {
+                        MPLogError(@"Failed to parse blob data in %@: %@", tableName, error);
+                    }
                 } else {
                     [self logSqlError:[NSString stringWithFormat:@"No blob found in data column for row in %@", tableName]];
                 }
